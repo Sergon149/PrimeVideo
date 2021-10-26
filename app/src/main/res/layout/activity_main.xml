@@ -21,11 +21,13 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0">
 
         <HorizontalScrollView
             android:layout_width="match_parent"
@@ -116,43 +118,49 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="190dp"
-                    android:src="@mipmap/elpueblo"
-                    android:scaleType="fitCenter"/>
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/elpueblo" />
 
-//Series Amazon Originals y exclusivas
+                //Series Amazon Originals y exclusivas
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
                     android:text="Series Amazon Originals y exclusivas"
                     android:textColor="@color/white"
                     android:textSize="17dp"
-                    android:textStyle="bold"
-                    android:layout_margin="15dp"/>
+                    android:textStyle="bold" />
 
                 <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/copia1"
-                        android:layout_margin="5dp"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/star"
-                        android:layout_margin="5dp"/>
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@mipmap/ersergio"
-                        android:layout_margin="5dp"/>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:src="@mipmap/copia1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:src="@mipmap/star" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:src="@mipmap/ersergio" />
                     </LinearLayout>
                 </HorizontalScrollView>
-//Sigue viendo tus series y películas
+
+                //Sigue viendo tus series y películas
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -185,7 +193,7 @@
                             android:layout_margin="5dp"/>
                     </LinearLayout>
                 </HorizontalScrollView>
-//Películas mas taquilleras
+                //Películas mas taquilleras
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -218,7 +226,6 @@
                             android:layout_margin="5dp"/>
                     </LinearLayout>
                 </HorizontalScrollView>
-
             </LinearLayout>
 
         </ScrollView>
@@ -229,12 +236,49 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:orientation="horizontal"
+        android:background="@color/black"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/casa"
+            app:tint="#27A3C9">
+        </ImageView>
 
 
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/lupa"
+            app:tint="#959595">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/descargas"
+            app:tint="#959595">
+        </ImageView>
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:src="@mipmap/rosca"
+            app:tint="#959595">
+        </ImageView>
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
